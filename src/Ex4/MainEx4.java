@@ -10,6 +10,7 @@ public class MainEx4 {
         System.out.println("Adresse mémoire du deuxième singleton : " + singleton2);
         if (singleton1 == singleton2) {
             System.out.println("Les deux instances ont la même adresse mémoire.");
+            System.out.println(4+"2");
         } else {
             System.out.println("Les deux instances ont des adresses mémoire différentes.");
         }
