@@ -1,11 +1,13 @@
-package User.Controller;
+package User.serialisationDeserialisation;
+
+import User.Controller.UtilisateurDto;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class userSerialisation {
     public static void main(String[] args) {
-        utilisateurDto userDTO = new utilisateurDto(1, "Papa", "Cosy", "papaCosy@gmail.com");
+        UtilisateurDto userDTO = new UtilisateurDto(1, "Papa", "Cosy", "papaCosy@gmail.com");
         String fichier = "C:\\Users\\aguen\\Documents\\java\\src\\Database\\Data\\utilisateurDTO.json";
 
         try (FileWriter fileWriter = new FileWriter(fichier)) {

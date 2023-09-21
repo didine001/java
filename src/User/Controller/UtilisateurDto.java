@@ -2,13 +2,13 @@ package User.Controller;
 
 import java.io.Serializable;
 
-public class utilisateurDto implements Serializable {
-    private int id;
-    private String nom;
-    private String prenom;
-    private String email;
+public class UtilisateurDto implements Serializable {
+    private final int id;
+    private final String nom;
+    private final String prenom;
+    private final String email;
 
-    public utilisateurDto(int id, String nom, String prenom, String email) {
+    public UtilisateurDto(int id, String nom, String prenom, String email) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -35,5 +35,4 @@ public class utilisateurDto implements Serializable {
         return "[Prenom : " + prenom + ", Nom : " + nom
                 + ", Email : " + email + "]";
     }
-
 }

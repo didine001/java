@@ -1,6 +1,6 @@
 package Ex3;
 
-public class Main {
+public class MainEx3 {
     public static void main(String[] args) {
         Utilisateur utilisateur = new Utilisateur("Didine", 2004, "France");
         System.out.println(utilisateur.giveName());

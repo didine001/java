@@ -1,6 +1,6 @@
 package Ex1;
 
-public class Main {
+public class MainEx1 {
     public static void main(String[] args) {
         Exercice1 exercice1 = new Exercice1();
         String s = "didine"; //enidid

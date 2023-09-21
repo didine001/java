@@ -1,4 +1,4 @@
-package User.Services;
+package User.Controller;
 
 import User.Models.Utilisateur;
 
@@ -17,7 +17,7 @@ public class readUser {
 
             connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
         } catch (ClassNotFoundException | SQLException e) {
-            e.getMessage();
+            e.getStackTrace();
         }
     }
 

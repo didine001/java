@@ -1,4 +1,4 @@
-package User.Services;
+package User.Controller;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

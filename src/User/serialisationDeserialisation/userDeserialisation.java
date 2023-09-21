@@ -1,5 +1,6 @@
-package User.Controller;
+package User.serialisationDeserialisation;
 
+import User.Controller.UtilisateurDto;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -23,7 +24,7 @@ public class userDeserialisation {
             String prenom = jsonObject.getString("prenom");
             String email = jsonObject.getString("email");
 
-            utilisateurDto utilisateurDto = new utilisateurDto(id, nom, prenom, email);
+            UtilisateurDto utilisateurDto = new UtilisateurDto(id, nom, prenom, email);
 
             System.out.println("Objet utilisateurDto désérialisé : " + utilisateurDto.tostring());
         } catch (IOException e) {

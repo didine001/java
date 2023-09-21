@@ -1,4 +1,4 @@
-package User.Services;
+package User.Controller;
 
 import User.Models.Utilisateur;
 
@@ -7,10 +7,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class createUser {
+public class updateUser {
     private Connection connexion;
 
-    public createUser() {
+    public updateUser() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -20,19 +20,18 @@ public class createUser {
 
             connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
         } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 
-    public void createUser(Utilisateur utilisateur) {
-        String insertQuery = "INSERT INTO Utilisateur (nom, prenom, email) VALUES (?, ?, ?)";
-        try (PreparedStatement preparedStatement = connexion.prepareStatement(insertQuery)) {
+    public void updateUser(Utilisateur utilisateur) throws SQLException {
+        String updateQuery = "UPDATE Utilisateur SET nom = ?, prenom = ?, email = ? WHERE ID = ?";
+        try (PreparedStatement preparedStatement = connexion.prepareStatement(updateQuery)) {
             preparedStatement.setString(1, utilisateur.getNom());
             preparedStatement.setString(2, utilisateur.getPrenom());
             preparedStatement.setString(3, utilisateur.getAdresseEmail());
+            preparedStatement.setInt(4, utilisateur.getId());
             preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.getMessage();
         }
     }
 }
