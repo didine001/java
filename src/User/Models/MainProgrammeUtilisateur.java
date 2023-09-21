@@ -1,6 +1,5 @@
 package User.Models;
 
-
 public class MainProgrammeUtilisateur {
     public static void main(String[] args) {
         Utilisateur utilisateur = new Utilisateur(1, "didine", "pro", "aguenassia@gmail.com");
