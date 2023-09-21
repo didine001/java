@@ -3,10 +3,10 @@ package User.Controller;
 import java.io.Serializable;
 
 public class UtilisateurDto implements Serializable {
-    private final int id;
-    private final String nom;
-    private final String prenom;
-    private final String email;
+    private int id;
+    private String nom;
+    private String prenom;
+    private String email;
 
     public UtilisateurDto(int id, String nom, String prenom, String email) {
         this.id = id;

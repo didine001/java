@@ -3,10 +3,10 @@ package User.Models;
 import java.io.Serializable;
 
 public class Utilisateur implements Serializable {
-    private final int id;
-    private final String nom;
-    private final String prenom;
-    private final String email;
+    private int id;
+    private String nom;
+    private String prenom;
+    private String email;
 
     public Utilisateur(int id, String nom, String prenom, String email) {
         this.id = id;
