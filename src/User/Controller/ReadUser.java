@@ -4,10 +4,10 @@ import User.Models.Utilisateur;
 
 import java.sql.*;
 
-public class readUser {
+public class ReadUser {
     private Connection connexion;
 
-    public readUser() {
+    public ReadUser() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 

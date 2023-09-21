@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class deleteUser {
+public class DeleteUser {
     private Connection connexion;
 
-    public deleteUser() {
+    public DeleteUser() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -18,7 +18,7 @@ public class deleteUser {
 
             connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
         } catch (ClassNotFoundException | SQLException e) {
-            e.getMessage();
+            e.getStackTrace();
         }
     }
 

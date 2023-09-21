@@ -5,7 +5,7 @@ import User.Controller.UtilisateurDto;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class userSerialisation {
+public class UserSerialisation {
     public static void main(String[] args) {
         UtilisateurDto userDTO = new UtilisateurDto(1, "Papa", "Cosy", "papaCosy@gmail.com");
         String fichier = "C:\\Users\\aguen\\Documents\\java\\src\\Database\\Data\\utilisateurDTO.json";
@@ -19,7 +19,7 @@ public class userSerialisation {
 
             System.out.println("utilisateurDto a été sérialisé dans " + fichier);
         } catch (IOException e) {
-            e.getMessage();
+            e.getStackTrace();
         }
     }
 }

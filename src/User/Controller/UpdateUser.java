@@ -7,10 +7,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class updateUser {
+public class UpdateUser {
     private Connection connexion;
 
-    public updateUser() {
+    public UpdateUser() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -20,7 +20,7 @@ public class updateUser {
 
             connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
         } catch (ClassNotFoundException | SQLException e) {
-            e.getMessage();
+            e.getStackTrace();
         }
     }
 

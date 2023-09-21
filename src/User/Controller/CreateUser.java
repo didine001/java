@@ -4,10 +4,10 @@ import User.Models.Utilisateur;
 
 import java.sql.*;
 
-public class createUser {
+public class CreateUser {
     private Connection connexion;
 
-    public createUser() {
+    public CreateUser() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -29,7 +29,7 @@ public class createUser {
             preparedStatement.setString(3, utilisateur.getAdresseEmail());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            e.getMessage();
+            e.getStackTrace();
         }
     }
 }
